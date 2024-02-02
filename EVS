@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sticky Navigation Bar</title>
+<style>
+    /* Resetting default browser styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Styling the navigation bar */
+    nav {
+      background-color: #34495e; /* Dark background color */
+      color: #fff; /* White text color */
+      padding: 15px;
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    }
+
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      text-align: center; /* Center the navigation links */
+    }
+
+    nav ul li {
+      display: inline-block; /* Use inline-block for better alignment */
+      margin-right: 20px;
+      position: relative; /* Position for dropdown */
+      transition: transform 0.3s ease-in-out; /* Add transition effect */
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: inherit; /* Inherit text color */
+      font-weight: bold;
+      font-size: 16px; /* Adjust font size */
+    }
+
+    nav ul li a:hover {
+      color: #ffd700; /* Text color on hover */
+    }
+
+    /* Dropdown menu */
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #2c3e50; /* Dark background color */
+      min-width: 160px;
+      z-index: 100;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      padding: 12px 16px;
+      border-radius: 5px;
+      transition: opacity 0.3s ease-in-out; /* Add transition effect */
+      opacity: 0;
+      pointer-events: none; /* Hide dropdown initially */
+      top: 30px; /* Adjust dropdown position */
+    }
+
+    .dropdown-content a {
+      display: block;
+      padding: 10px 0;
+      text-decoration: none;
+      color: #fff; /* White text color */
+      transition: opacity 0.3s ease-in-out; /* Add transition effect */
+    }
+
+    .dropdown-content a:hover {
+      background-color: #34495e; /* Dark background color */
+    }
+
+    nav ul li:hover .dropdown-content {
+      display: block;
+      opacity: 1;
+      pointer-events: auto; /* Show dropdown on hover */
+    }
+
+    /* Add some padding to the body to prevent content from being hidden under the navigation bar */
+    body {
+      padding-top: 70px; /* Adjust this value to match the height of your navigation bar */
+      font-family: Arial, sans-serif; /* Choose a suitable font */
+      line-height: 1.6;
+      background-color: #ecf0f1; /* Light background color */
+    }
+
+    /* Animation for navigation links */
+    nav ul li:hover {
+      transform: translateY(-3px); /* Move the element up on hover */
+    }
+  </style>
+</head>
+<body>
+  <nav id="navbar">
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact_Us</a></li>
+      <li><a href="#">Help</a></li>
+    </ul>
+   
+  </nav>
+
+  <!-- Some content to scroll -->
+  <div style="height: 2000px; background-color: #f0f0f0;">
+     <div class="ml-auto flex items-center">
+            <button class="hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                Sign Up
+            </button>
+
+            <br><br>
+
+            <button class="hover:bg-green-500 text-white font-bold py-2 px-4 rounded ml-2">
+                Log in
+            </button>
+        </div>
+  </div>
+
+  
+</body>
+</html>
